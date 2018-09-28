@@ -109,9 +109,10 @@ game = {
     },
     battle () {
       for (let i = 0; i <= 3; i++) {
+        console.log(`this is card ${player}`)
         let playerCard = this.player.hand.pop();
         let computerCard = this.computer.hand.pop();
-        // console.log(playerCard);
+        $('.gameboard').append(playerCard);
         // console.log(computerCard);
         if(playerCard.damage > computerCard.damage){
             this.player.points++
